@@ -17,24 +17,24 @@ body {
     padding: 20px;
 }
 
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
 .container {
     width: 100%;
     max-width: 340px;
     background: #f8f9fb;
     border-radius: 35px;
     box-shadow:
-            0 20px 60px rgba(0, 0, 0, 0.08),
+            0 4px 12px rgba(0, 0, 0, 0.08),
             0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     padding: 30px 25px;
     text-align: center;
     position: relative;
     box-sizing: border-box;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
 .container::after, .container::before {
