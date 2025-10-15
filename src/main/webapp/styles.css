@@ -17,6 +17,12 @@ body {
     padding: 20px;
 }
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .container {
     width: 100%;
     max-width: 340px;
@@ -27,6 +33,37 @@ body {
             0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     padding: 30px 25px;
     text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.container::after, .container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 55%, #a8e6cf, #dcedc1, #b4e7ce, #a8e6cf);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 35px;
+    animation: 2s spin linear infinite;
+}
+
+.container::after {
+    filter: blur(2rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
 
 .search-box {
