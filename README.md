@@ -1,5 +1,7 @@
 Link demo: https://simple-weatherapp-2uvw.onrender.com
 
+![demo.png](img/demo.png)
+
 The server might take a little while to wake up since I'm using free subscription on Render and they have your web service go idle after some inactivity.
 There is still a lot to upgrade but for now try these cities:
 <li>Amsterdam</li>
